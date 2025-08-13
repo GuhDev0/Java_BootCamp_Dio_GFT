@@ -7,7 +7,7 @@ public class Main {
 
         Exercicios exercicios = new Exercicios();
 
-        exercicios.exercicioComparandoIdade();
+        exercicios.exercicioDividirAteChegarAZero();
 
 
 

@@ -55,7 +55,80 @@ public class Exercicios {
 
 
     }
+    public void exercicioTabuada(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Tabuada");
+        int numberUser = input.nextInt();
+        for(int i = 1; i <= 10; i++){
+            int numberMultiplicado = numberUser * i;
+            System.out.printf("%s * %s = %s \n",numberUser, i ,numberMultiplicado);
+        }
+    }
+    public void exercicioCalculoDeImc(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Calculo de Imc");
+        System.out.println("Qual é o seu peso ? ");
+        float peso = input.nextFloat();
+        System.out.println("Qual é a sua Altura? ");
+        float altura = input.nextFloat();
+        float IMC = peso / (altura * altura);
+        System.out.printf("SEU É IMC É : %.2f", IMC);
+        if (IMC >= 18.5 && IMC <= 25){
+            System.out.println("Peso ideial");
+        }else if (IMC >= 25 && IMC <= 30){
+            System.out.println("Levemente acima do peso");
+        }else if (IMC >= 30 && IMC <= 35){
+            System.out.println("Obesido acima do peso");
+        }else if (IMC >= 35 && IMC <= 40){
+            System.out.println("Obesidade GRAU ||");
+        }else if (IMC >= 40 && IMC <= 45){
+            System.out.println("Obesidade GRAU |||");
+        }else{
+            System.out.println("Passou dos limites");
+        }
 
 
+    }
+    public void exercicioRetornaParesEImpares(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um Numero ? ");
+        int numero = input.nextInt();
+        System.out.println("Digite outro Numero ? ");
+        int numero2 = input.nextInt();
+
+        for(int i = numero; numero2 >= i; i++){
+
+            if(i % 2 == 0){
+                System.out.printf( " Pares "+ i +  "  " );
+            }
+
+            if(i % 2 == 1){
+                System.out.printf("Impares " + i + " \n");
+            }
+        }
+
+
+
+    }
+    public void exercicioDividirAteChegarAZero(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um Numero ? ");
+        int numeroInicial = input.nextInt();
+        System.out.println("Digite outro Numero ? ");
+        int numero2 = input.nextInt();
+        int numeroAtual =   numero2 % numeroInicial;
+
+        while(numeroAtual == 0){
+                 if( numero2 < numeroInicial){
+                     continue;
+                 }
+                System.out.printf(numeroAtual + "\n Digite outro numero: \n");
+                numero2 = input.nextInt();
+                numeroAtual =   numero2 % numeroInicial;
+
+
+        }
+        System.out.printf(numeroAtual + " Loop Finalizado");
+    }
 
 }
